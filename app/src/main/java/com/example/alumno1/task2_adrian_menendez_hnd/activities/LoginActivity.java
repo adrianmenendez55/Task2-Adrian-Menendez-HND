@@ -1,4 +1,4 @@
-package com.example.alumno1.task2_adrian_menendez_hnd;
+package com.example.alumno1.task2_adrian_menendez_hnd.activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -7,6 +7,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.example.alumno1.task2_adrian_menendez_hnd.MainActivity;
+import com.example.alumno1.task2_adrian_menendez_hnd.Preferencias;
+import com.example.alumno1.task2_adrian_menendez_hnd.R;
+import com.example.alumno1.task2_adrian_menendez_hnd.beans.UsuarioBean;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 

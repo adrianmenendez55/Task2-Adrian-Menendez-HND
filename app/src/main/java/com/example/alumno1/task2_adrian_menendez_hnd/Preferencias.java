@@ -3,6 +3,8 @@ package com.example.alumno1.task2_adrian_menendez_hnd;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import com.example.alumno1.task2_adrian_menendez_hnd.beans.UsuarioBean;
+
 public class Preferencias {
     private Context context;
     private final String PREFERENCIAS = "preferencias";

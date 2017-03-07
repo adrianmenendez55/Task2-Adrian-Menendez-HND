@@ -1,4 +1,4 @@
-package com.example.alumno1.task2_adrian_menendez_hnd;
+package com.example.alumno1.task2_adrian_menendez_hnd.beans;
 
 import com.google.gson.Gson;
 

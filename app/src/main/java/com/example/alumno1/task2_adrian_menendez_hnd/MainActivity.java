@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.alumno1.task2_adrian_menendez_hnd.activities.LoginActivity;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     private Button btnSalir;
