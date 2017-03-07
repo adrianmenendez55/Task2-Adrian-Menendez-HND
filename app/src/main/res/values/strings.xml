@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Task2-Adrian-Menendez-HND</string>
+    <string name="email">Introduce e-mail</string>
+    <string name="pass">Introduce contraseña</string>
+    <string name="btnEntrar">Entrar</string>
+    <string name="nuevoUsuario">Nuevo Usuario</string>
+    <string name="salir">Cerrar sesion</string>
+    <string name="email_hint">Introduce e-mail</string>
+    <string name="nombre_hint">Introduce nombre</string>
+    <string name="apellidos_hint">Introduce apellido</string>
+    <string name="password_hint">Introduce contraseña</string>
+    <string name="password2_hint">Introduce la contraseña de nuevo</string>
+    <string name="btnGuardar">Guardar</string>
 </resources>
