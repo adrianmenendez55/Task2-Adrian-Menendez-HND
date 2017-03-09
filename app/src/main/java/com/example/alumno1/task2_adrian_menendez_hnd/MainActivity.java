@@ -1,25 +1,54 @@
 package com.example.alumno1.task2_adrian_menendez_hnd;
 
 import android.content.Intent;
+import android.support.annotation.NonNull;
+import android.support.design.widget.NavigationView;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 
 import com.example.alumno1.task2_adrian_menendez_hnd.activities.LoginActivity;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+public class MainActivity extends AppCompatActivity implements View.OnClickListener, NavigationView.OnNavigationItemSelectedListener{
 
-    private Button btnSalir;
+    private Toolbar toolbar;
+    private DrawerLayout drawer;
+    private NavigationView navView;
+    private FragmentManager fm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btnSalir = (Button) findViewById(R.id.btnSalir);
+        drawer = (DrawerLayout) findViewById(R.id.drawer);
+        navView = (NavigationView) findViewById(R.id.navView);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        // SetHome es el metodo para poner el icono
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_action_menu);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true); // Icono activado
+        navView.setNavigationItemSelectedListener(this);
 
-        btnSalir.setOnClickListener(this);
+        fm = getSupportFragmentManager();
+        // al quitar el fragment se vacía la pila
+        fm.popBackStack(null,FragmentManager.POP_BACK_STACK_INCLUSIVE);
+
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                drawer.openDrawer(GravityCompat.START);
+                break;
+        }
+        return true;
     }
 
     @Override
@@ -29,5 +58,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Intent intent = new Intent(MainActivity.this, LoginActivity.class);
         startActivity(intent);
         finish();
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        return true;
     }
 }

@@ -14,7 +14,8 @@
     <EditText  android:id="@+id/editEmail"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:hint="@string/email_hint"/>
+        android:hint="@string/email_hint"
+        android:inputType="textEmailAddress"/>
 
     <EditText android:id="@+id/editNombre"
         android:layout_height="wrap_content"
@@ -29,12 +30,14 @@
     <EditText android:id="@+id/editPassword"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:hint="@string/password_hint"/>
+        android:hint="@string/password_hint"
+        android:inputType="textPassword"/>
 
     <EditText android:id="@+id/editPassword2"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:hint="@string/password2_hint"/>
+        android:hint="@string/password2_hint"
+        android:inputType="textPassword"/>
 
     <Button android:id="@+id/btnGuardar"
         android:layout_height="wrap_content"
