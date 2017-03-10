@@ -6,10 +6,13 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.example.alumno1.task2_adrian_menendez_hnd.R;
 
 public class DescripcionFragment extends Fragment {
+
+    private TextView txtDescrip;
 
     public DescripcionFragment() {
         // Required empty public constructor
@@ -22,8 +25,9 @@ public class DescripcionFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_descripcion, container, false);
+        View rootview = inflater.inflate(R.layout.fragment_descripcion, container, false);
+        txtDescrip = (TextView) rootview.findViewById(R.id.txtDescrip);
+        return rootview;
     }
 
     @Override

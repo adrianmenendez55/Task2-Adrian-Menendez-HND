@@ -13,6 +13,8 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.example.alumno1.task2_adrian_menendez_hnd.activities.LoginActivity;
+import com.example.alumno1.task2_adrian_menendez_hnd.fragments.DescripcionFragment;
+import com.example.alumno1.task2_adrian_menendez_hnd.fragments.PerfilFragment;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, NavigationView.OnNavigationItemSelectedListener{
 
@@ -62,6 +64,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.item_perfil:
+                PerfilFragment perfilFragment = PerfilFragment.newInstance();
+                fm.beginTransaction().replace(R.id.container, perfilFragment).commit();
+                break;
+            case R.id.item_descripcion:
+                DescripcionFragment descripcionFragment = DescripcionFragment.newInstance();
+                fm.beginTransaction().replace(R.id.container, descripcionFragment).commit();
+                break;
+        }
+        item.setChecked(true);
+        getSupportActionBar().setTitle(item.getTitle());
+        drawer.closeDrawers();
+
         return true;
     }
 }

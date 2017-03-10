@@ -15,6 +15,8 @@ import com.example.alumno1.task2_adrian_menendez_hnd.beans.UsuarioBean;
 public class PerfilFragment extends Fragment {
 
     private TextView textoUsuario;
+    private TextView textoApellido;
+    private TextView textoEmail;
 
     public PerfilFragment() {
         // Required empty public constructor
@@ -27,11 +29,16 @@ public class PerfilFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_perfil, container, false);
+        View rootview = inflater.inflate(R.layout.fragment_perfil, container, false);
+        textoUsuario = (TextView)rootview.findViewById(R.id.textoUsuario);
+        textoApellido = (TextView) rootview.findViewById(R.id.textoApellido);
+        textoEmail = (TextView) rootview.findViewById(R.id.textoEmail);
         Preferencias preferencias = new Preferencias(getActivity());
         UsuarioBean usuarioBean = preferencias.getUsuario();
-        textoUsuario.setText(String.valueOf(usuarioBean.getNombre()));
-        return view;
+        textoUsuario.setText("Nombre del usuario: " +(usuarioBean.getNombre()));
+        textoApellido.setText("Apellido del usuario: " +(usuarioBean.getApellidos()));
+        textoEmail.setText("Email del usuario: " + usuarioBean.getEmail());
+        return rootview;
         // Verificar acceso email y que las contraseñas sean iguales, y acceder al perfil
     }
 
@@ -44,4 +51,6 @@ public class PerfilFragment extends Fragment {
     public void onDetach() {
         super.onDetach();
     }
+
+
 }
