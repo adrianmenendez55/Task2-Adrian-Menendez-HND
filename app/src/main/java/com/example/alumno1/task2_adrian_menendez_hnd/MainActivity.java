@@ -14,7 +14,9 @@ import android.view.View;
 
 import com.example.alumno1.task2_adrian_menendez_hnd.activities.LoginActivity;
 import com.example.alumno1.task2_adrian_menendez_hnd.fragments.DescripcionFragment;
+import com.example.alumno1.task2_adrian_menendez_hnd.fragments.ObjetosFragment;
 import com.example.alumno1.task2_adrian_menendez_hnd.fragments.PerfilFragment;
+import com.example.alumno1.task2_adrian_menendez_hnd.fragments.PersonajesFragment;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, NavigationView.OnNavigationItemSelectedListener{
 
@@ -72,6 +74,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.item_descripcion:
                 DescripcionFragment descripcionFragment = DescripcionFragment.newInstance();
                 fm.beginTransaction().replace(R.id.container, descripcionFragment).commit();
+                break;
+            case R.id.item_personajes:
+                PersonajesFragment personajesFragment = PersonajesFragment.newInstance();
+                fm.beginTransaction().replace(R.id.container, personajesFragment).commit();
+                break;
+            case R.id.item_objetos:
+                ObjetosFragment objetosFragment = ObjetosFragment.newInstance();
+                fm.beginTransaction().replace(R.id.container, objetosFragment).commit();
+
                 break;
         }
         item.setChecked(true);

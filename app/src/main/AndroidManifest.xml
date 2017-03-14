@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".activities.NuevoUsuarioActivity" />
-        <activity android:name=".activities.PersonajeActivity"></activity>
+        <activity android:name=".activities.PersonajeActivity" />
+        <activity android:name=".activities.ObjetosActivity"></activity>
     </application>
 
 </manifest>
