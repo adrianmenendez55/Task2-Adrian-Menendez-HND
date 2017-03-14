@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".activities.NuevoUsuarioActivity" />
         <activity android:name=".activities.PersonajeActivity" />
-        <activity android:name=".activities.ObjetosActivity"></activity>
+        <activity android:name=".activities.ObjetosActivity" />
+        <activity android:name=".activities.TipsActivity"></activity>
     </application>
 
 </manifest>

@@ -12,7 +12,6 @@
     <ImageView android:id="@+id/imagen"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:textSize="30dp"
-        />
+        android:textSize="30dp" />
 
 </LinearLayout>

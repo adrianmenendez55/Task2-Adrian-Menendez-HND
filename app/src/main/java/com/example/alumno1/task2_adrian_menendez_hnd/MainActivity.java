@@ -17,6 +17,7 @@ import com.example.alumno1.task2_adrian_menendez_hnd.fragments.DescripcionFragme
 import com.example.alumno1.task2_adrian_menendez_hnd.fragments.ObjetosFragment;
 import com.example.alumno1.task2_adrian_menendez_hnd.fragments.PerfilFragment;
 import com.example.alumno1.task2_adrian_menendez_hnd.fragments.PersonajesFragment;
+import com.example.alumno1.task2_adrian_menendez_hnd.fragments.TipsFragment;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, NavigationView.OnNavigationItemSelectedListener{
 
@@ -82,7 +83,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.item_objetos:
                 ObjetosFragment objetosFragment = ObjetosFragment.newInstance();
                 fm.beginTransaction().replace(R.id.container, objetosFragment).commit();
-
+                break;
+            case R.id.item_tips:
+                TipsFragment tipsFragment = TipsFragment.newInstance();
+                fm.beginTransaction().replace(R.id.container, tipsFragment).commit();
                 break;
         }
         item.setChecked(true);
