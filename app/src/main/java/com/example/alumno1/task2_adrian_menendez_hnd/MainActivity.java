@@ -13,6 +13,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.example.alumno1.task2_adrian_menendez_hnd.activities.LoginActivity;
+import com.example.alumno1.task2_adrian_menendez_hnd.fragments.AjustesFragment;
 import com.example.alumno1.task2_adrian_menendez_hnd.fragments.DescripcionFragment;
 import com.example.alumno1.task2_adrian_menendez_hnd.fragments.ObjetosFragment;
 import com.example.alumno1.task2_adrian_menendez_hnd.fragments.PerfilFragment;
@@ -87,6 +88,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.item_tips:
                 TipsFragment tipsFragment = TipsFragment.newInstance();
                 fm.beginTransaction().replace(R.id.container, tipsFragment).commit();
+                break;
+            case R.id.item_ajustes:
+                AjustesFragment ajustesFragment = AjustesFragment.newInstance();
+                fm.beginTransaction().replace(R.id.container, ajustesFragment).commit();
+                break;
+            case R.id.item_salir:
+                Preferencias preferencias = new Preferencias(MainActivity.this);
+                preferencias.setLogin(false);
+                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                startActivity(intent);
+                finish();
                 break;
         }
         item.setChecked(true);

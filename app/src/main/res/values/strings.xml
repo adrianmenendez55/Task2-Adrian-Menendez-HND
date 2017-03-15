@@ -21,4 +21,7 @@
     <string name="tips">Tips del juego</string>
     <string name="ajustes">Ajustes</string>
     <string name="descrip">Se trata de un juego de naves cuyo objetivo es matar a todos los enemigos y a un boss</string>
+    <string name="AjustesContacto">Contacto: 911234567</string>
+    <string name="AjustesInfo">Información del desarrollador: info@cev.com</string>
+    <string name="AjustesVersion">Versión: 2.0</string>
 </resources>
