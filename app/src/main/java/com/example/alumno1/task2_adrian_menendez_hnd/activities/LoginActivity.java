@@ -12,6 +12,7 @@ import com.example.alumno1.task2_adrian_menendez_hnd.MainActivity;
 import com.example.alumno1.task2_adrian_menendez_hnd.Preferencias;
 import com.example.alumno1.task2_adrian_menendez_hnd.R;
 import com.example.alumno1.task2_adrian_menendez_hnd.beans.UsuarioBean;
+import com.example.alumno1.task2_adrian_menendez_hnd.tests.Utils;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 

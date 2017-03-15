@@ -11,6 +11,7 @@ import android.widget.Toast;
 import com.example.alumno1.task2_adrian_menendez_hnd.Preferencias;
 import com.example.alumno1.task2_adrian_menendez_hnd.R;
 import com.example.alumno1.task2_adrian_menendez_hnd.beans.UsuarioBean;
+import com.example.alumno1.task2_adrian_menendez_hnd.tests.Utils;
 
 public class NuevoUsuarioActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -42,7 +43,7 @@ public class NuevoUsuarioActivity extends AppCompatActivity implements View.OnCl
         String password2 = editPassword2.getText().toString();
 
         if (email != null && nombre != null && apellidos != null && password != null && password2 != null &&
-                !email.isEmpty() && !nombre.isEmpty() && !apellidos.isEmpty() && !password.isEmpty() && !password2.isEmpty()) {
+                !email.isEmpty() && !nombre.isEmpty() && !apellidos.isEmpty() && !password.isEmpty() && !password2.isEmpty() && Utils.isEmail(email) && password.equals(password2)) {
             // email formato correcto, pass1 y pass2 iguales
             UsuarioBean usuarioBean = new UsuarioBean(email, nombre, apellidos, password);
 
