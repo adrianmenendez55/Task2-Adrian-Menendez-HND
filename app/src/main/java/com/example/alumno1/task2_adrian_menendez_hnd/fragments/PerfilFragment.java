@@ -3,20 +3,24 @@ package com.example.alumno1.task2_adrian_menendez_hnd.fragments;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.alumno1.task2_adrian_menendez_hnd.Preferencias;
 import com.example.alumno1.task2_adrian_menendez_hnd.R;
 import com.example.alumno1.task2_adrian_menendez_hnd.beans.UsuarioBean;
 
-public class PerfilFragment extends Fragment {
+public class PerfilFragment extends Fragment implements View.OnClickListener{
 
     private TextView textoUsuario;
     private TextView textoApellido;
     private TextView textoEmail;
+    private Button editarPerfil;
 
     public PerfilFragment() {
         // Required empty public constructor
@@ -33,13 +37,16 @@ public class PerfilFragment extends Fragment {
         textoUsuario = (TextView)rootview.findViewById(R.id.textoUsuario);
         textoApellido = (TextView) rootview.findViewById(R.id.textoApellido);
         textoEmail = (TextView) rootview.findViewById(R.id.textoEmail);
+        editarPerfil = (Button) rootview.findViewById(R.id.editarPerfil);
+
+        editarPerfil.setOnClickListener(this);
+
         Preferencias preferencias = new Preferencias(getActivity());
         UsuarioBean usuarioBean = preferencias.getUsuario();
         textoUsuario.setText("Nombre del usuario: " +(usuarioBean.getNombre()));
         textoApellido.setText("Apellido del usuario: " +(usuarioBean.getApellidos()));
         textoEmail.setText("Email del usuario: " + usuarioBean.getEmail());
         return rootview;
-        // Verificar acceso email y que las contraseñas sean iguales, y acceder al perfil
     }
 
     @Override
@@ -53,4 +60,8 @@ public class PerfilFragment extends Fragment {
     }
 
 
+    @Override
+    public void onClick(View view) {
+        
+    }
 }

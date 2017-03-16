@@ -12,9 +12,9 @@ import java.util.ArrayList;
 public class Modelo {
     public static ArrayList<PersonajesBean> getPersonajes(){
         ArrayList<PersonajesBean> personajes = new ArrayList<>();
-        personajes.add(new PersonajesBean(R.drawable.camisa, "Nave principal", "Nave que controlaremos"));
-        personajes.add(new PersonajesBean(R.drawable.camisa, "Nave enemiga", "Naves enemigas que tendremos que destruir para combatir con el boss"));
-        personajes.add(new PersonajesBean(R.drawable.camisa, "Nave final o boss", "Nave boss que habrá que derrotar para ganar el juego"));
+        personajes.add(new PersonajesBean(R.drawable.nave1, "Nave principal", "Nave que controlaremos, ligera y fácilmente manejable. Contiene misiles."));
+        personajes.add(new PersonajesBean(R.drawable.nave3, "Nave enemiga", "Naves enemigas que tendremos que destruir para combatir con el boss, no son demasiado resistentes. Armas no demasiado poderosas."));
+        personajes.add(new PersonajesBean(R.drawable.nave2, "Nave final o boss", "Nave boss que habrá que derrotar para ganar el juego. La nave más difícil de derrotar. Misiles más dañinos y más resistentes"));
 
         return personajes;
     }

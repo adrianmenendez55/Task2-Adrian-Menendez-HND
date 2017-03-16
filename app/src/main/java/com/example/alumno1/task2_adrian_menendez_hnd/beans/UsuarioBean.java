@@ -17,7 +17,6 @@ public class UsuarioBean implements Serializable {
     public UsuarioBean() {
     }
 
-
     public String getEmail() {
         return email;
     }

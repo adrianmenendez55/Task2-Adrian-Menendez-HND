@@ -44,7 +44,7 @@ public class NuevoUsuarioActivity extends AppCompatActivity implements View.OnCl
 
         if (email != null && nombre != null && apellidos != null && password != null && password2 != null &&
                 !email.isEmpty() && !nombre.isEmpty() && !apellidos.isEmpty() && !password.isEmpty() && !password2.isEmpty() && Utils.isEmail(email) && password.equals(password2)) {
-            // email formato correcto, pass1 y pass2 iguales
+
             UsuarioBean usuarioBean = new UsuarioBean(email, nombre, apellidos, password);
 
             Preferencias preferencias = new Preferencias(NuevoUsuarioActivity.this);

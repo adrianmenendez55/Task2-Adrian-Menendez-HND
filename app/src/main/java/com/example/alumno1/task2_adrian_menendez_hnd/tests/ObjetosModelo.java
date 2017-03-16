@@ -8,9 +8,8 @@ import java.util.ArrayList;
 public class ObjetosModelo {
     public static ArrayList<ObjetosBean> getObjetos() {
         ArrayList<ObjetosBean> objetos = new ArrayList<>();
-        objetos.add(new ObjetosBean(R.drawable.camisa, "Objeto1", "DetalleObjeto1"));
-        objetos.add(new ObjetosBean(R.drawable.camisa, "Objeto2", "DetalleObjeto2"));
-        objetos.add(new ObjetosBean(R.drawable.camisa, "Objeto3", "DetalleObjeto3"));
+        objetos.add(new ObjetosBean(R.drawable.montana, "Montañas", "Montañas que habrá que sortear para avanzar por el mapa. Si te chocas con ellas, mueres."));
+        objetos.add(new ObjetosBean(R.drawable.amanecer, "Amanecer", "Cielo del juego. Inspirado en los amanaceres en la montaña."));
 
         return objetos;
     }

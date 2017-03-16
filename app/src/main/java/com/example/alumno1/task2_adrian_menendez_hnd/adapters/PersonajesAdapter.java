@@ -32,7 +32,6 @@ public class PersonajesAdapter extends ArrayAdapter<PersonajesBean>{
 
     class ViewHolder {
         TextView txtNomPersonaje;
-        ImageView imgPersonaje;
     }
 
     @NonNull
@@ -44,7 +43,6 @@ public class PersonajesAdapter extends ArrayAdapter<PersonajesBean>{
             viewHolder = new ViewHolder();
             view = LayoutInflater.from(context).inflate(resource, null);
             viewHolder.txtNomPersonaje = (TextView) view.findViewById(R.id.txtNomPersonaje);
-            viewHolder.imgPersonaje = (ImageView) view.findViewById(R.id.imgPersonaje);
             view.setTag(viewHolder);
 
         } else {
@@ -52,7 +50,6 @@ public class PersonajesAdapter extends ArrayAdapter<PersonajesBean>{
         }
         PersonajesBean personajesBean = objects.get(position);
         viewHolder.txtNomPersonaje.setText(personajesBean.getDescripcion());
-        viewHolder.imgPersonaje.setImageDrawable(ContextCompat.getDrawable(context,personajesBean.getFoto()));
 
         return view;
     }
