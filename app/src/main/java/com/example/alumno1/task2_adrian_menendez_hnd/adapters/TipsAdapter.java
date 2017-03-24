@@ -25,6 +25,7 @@ public class TipsAdapter extends ArrayAdapter<TipsBean>{
         this.objects = objects;
     }
 
+    // Clase viewholder creada para no estar creando elementos de la lista
     class ViewHolder {
         private TextView nombreTips;
     }

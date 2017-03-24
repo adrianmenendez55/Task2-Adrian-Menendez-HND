@@ -68,6 +68,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        // Opciones del menú y acceso a ellas
         switch (item.getItemId()){
             case R.id.item_perfil:
                 PerfilFragment perfilFragment = PerfilFragment.newInstance();

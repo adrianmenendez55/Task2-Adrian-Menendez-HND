@@ -29,7 +29,7 @@ public class PersonajesAdapter extends ArrayAdapter<PersonajesBean>{
         this.resource = resource;
         this.objects = objects;
     }
-
+    // Clase viewholder creada para no estar creando elementos de la lista
     class ViewHolder {
         TextView txtNomPersonaje;
     }

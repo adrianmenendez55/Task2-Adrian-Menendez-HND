@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 
 import java.io.Serializable;
 
+// Clase Bean que guarda los datos del usuario
 public class UsuarioBean implements Serializable {
     private String email, nombre, apellidos, password;
 

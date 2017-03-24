@@ -34,6 +34,7 @@ public class PersonajeActivity extends AppCompatActivity implements View.OnClick
 
         btnCompartir.setOnClickListener(this);
 
+        // Mostramos por pantalla en el detalle del persoanje el nombre, texto y foto alamcenados en PersonajesBean
         nombrePersonaje.setText(String.valueOf(personajesBean.getDescripcion()));
         imgPersonaje.setImageDrawable(ContextCompat.getDrawable(this, personajesBean.getFoto()));
         textoDetalle.setText(String.valueOf(personajesBean.getDetalle()));
@@ -41,6 +42,7 @@ public class PersonajeActivity extends AppCompatActivity implements View.OnClick
 
     @Override
     public void onClick(View view) {
+        // Función para compartir el detalle por redes sociales
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setType("text/plain");
         intent.putExtra(Intent.EXTRA_TEXT, String.valueOf(textoDetalle));

@@ -36,6 +36,7 @@ public class TipsActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
+        //Función de compartir en redes sociales
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setType("text/plain");
         intent.putExtra(Intent.EXTRA_TEXT, String.valueOf(detalleTips));

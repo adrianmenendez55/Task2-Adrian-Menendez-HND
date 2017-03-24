@@ -20,7 +20,6 @@ public class PerfilFragment extends Fragment implements View.OnClickListener{
     private TextView textoUsuario;
     private TextView textoApellido;
     private TextView textoEmail;
-    private Button editarPerfil;
 
     public PerfilFragment() {
         // Required empty public constructor
@@ -37,9 +36,6 @@ public class PerfilFragment extends Fragment implements View.OnClickListener{
         textoUsuario = (TextView)rootview.findViewById(R.id.textoUsuario);
         textoApellido = (TextView) rootview.findViewById(R.id.textoApellido);
         textoEmail = (TextView) rootview.findViewById(R.id.textoEmail);
-        editarPerfil = (Button) rootview.findViewById(R.id.editarPerfil);
-
-        editarPerfil.setOnClickListener(this);
 
         Preferencias preferencias = new Preferencias(getActivity());
         UsuarioBean usuarioBean = preferencias.getUsuario();

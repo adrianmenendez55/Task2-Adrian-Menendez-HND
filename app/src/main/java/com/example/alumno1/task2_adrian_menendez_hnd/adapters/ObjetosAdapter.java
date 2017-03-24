@@ -27,6 +27,7 @@ public class ObjetosAdapter extends ArrayAdapter<ObjetosBean>{
         this.objects = objects;
     }
 
+    // Clase viewholder creada para no estar creando elementos de la lista
     class ViewHolder {
         private TextView nombreObjeto;
     }

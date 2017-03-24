@@ -10,21 +10,19 @@
     <TextView android:id="@+id/textoUsuario"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="10dp"
         android:textSize="20dp"/>
 
     <TextView android:id="@+id/textoApellido"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="10dp"
         android:textSize="20dp"/>
 
     <TextView android:id="@+id/textoEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="10dp"
         android:textSize="20dp"/>
-
-    <Button android:id="@+id/editarPerfil"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/editarPerfil"/>
 
 </LinearLayout>

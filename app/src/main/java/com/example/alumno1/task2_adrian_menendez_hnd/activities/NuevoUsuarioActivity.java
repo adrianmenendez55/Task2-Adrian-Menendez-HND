@@ -30,7 +30,7 @@ public class NuevoUsuarioActivity extends AppCompatActivity implements View.OnCl
         editPassword2 = (EditText) findViewById(R.id.editPassword2);
 
         btnGuardar = (Button) findViewById(R.id.btnGuardar);
-
+        // Escuchador del botón de Guardar
         btnGuardar.setOnClickListener(this);
     }
 
@@ -44,7 +44,7 @@ public class NuevoUsuarioActivity extends AppCompatActivity implements View.OnCl
 
         if (email != null && nombre != null && apellidos != null && password != null && password2 != null &&
                 !email.isEmpty() && !nombre.isEmpty() && !apellidos.isEmpty() && !password.isEmpty() && !password2.isEmpty() && Utils.isEmail(email) && password.equals(password2)) {
-
+            // Si se cumplen las condiciones, se guarda el usuario
             UsuarioBean usuarioBean = new UsuarioBean(email, nombre, apellidos, password);
 
             Preferencias preferencias = new Preferencias(NuevoUsuarioActivity.this);

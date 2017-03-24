@@ -24,7 +24,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
         Preferencias preferencias = new Preferencias(LoginActivity.this);
         if (preferencias.isLogin() == false) {
             editEmail = (EditText) findViewById(R.id.editEmail);
@@ -32,6 +31,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             btnEntrar = (Button) findViewById(R.id.btnEntrar);
             btnNuevo = (Button) findViewById(R.id.btnNuevo);
 
+            // Escuchadores de los botones
             btnEntrar.setOnClickListener(this);
             btnNuevo.setOnClickListener(this);
         } else {
@@ -45,11 +45,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btnNuevo:
+                // Al pulsar el botón nuevo se abrirá la actividad de registro
                 Intent intent = new Intent(LoginActivity.this, NuevoUsuarioActivity.class);
                 startActivity(intent);
                 finish();
                 break;
             case R.id.btnEntrar:
+                // Al pulsar el botón entrar, si se realiza bien, se abrirá la actividad principal
                 String email = editEmail.getText().toString();
                 String pass = editPass.getText().toString();
                 if (email != null && pass != null && !email.isEmpty() && !pass.isEmpty()) {
@@ -57,6 +59,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     UsuarioBean usuarioBean = preferencias.getUsuario();
                     if (usuarioBean.getEmail() != null) {
                         if (email.equals(usuarioBean.getEmail()) && pass.equals(usuarioBean.getPassword())) {
+                            // Si el email y la contraseña son los usados en el registro, se abre la actividad principal
                             preferencias.setLogin(true);
                             intent = new Intent(LoginActivity.this, MainActivity.class);
                             startActivity(intent);

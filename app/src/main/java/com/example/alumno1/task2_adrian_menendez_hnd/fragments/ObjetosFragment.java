@@ -15,7 +15,7 @@ import com.example.alumno1.task2_adrian_menendez_hnd.R;
 import com.example.alumno1.task2_adrian_menendez_hnd.activities.ObjetosActivity;
 import com.example.alumno1.task2_adrian_menendez_hnd.adapters.ObjetosAdapter;
 import com.example.alumno1.task2_adrian_menendez_hnd.beans.ObjetosBean;
-import com.example.alumno1.task2_adrian_menendez_hnd.tests.ObjetosModelo;
+import com.example.alumno1.task2_adrian_menendez_hnd.tests.Modelo;
 
 import java.util.ArrayList;
 
@@ -38,7 +38,7 @@ public class ObjetosFragment extends Fragment implements AdapterView.OnItemClick
                              Bundle savedInstanceState) {
         View rootview = inflater.inflate(R.layout.fragment_objetos, container, false);
         listObjetos = (ListView) rootview.findViewById(R.id.listObjetos);
-        objetos = ObjetosModelo.getObjetos();
+        objetos = Modelo.getObjetos();
         ObjetosAdapter objetosAdapter = new ObjetosAdapter(getActivity(), R.layout.item_objetos, objetos);
         listObjetos.setAdapter(objetosAdapter);
         listObjetos.setOnItemClickListener(this);

@@ -14,7 +14,7 @@ import com.example.alumno1.task2_adrian_menendez_hnd.R;
 import com.example.alumno1.task2_adrian_menendez_hnd.activities.TipsActivity;
 import com.example.alumno1.task2_adrian_menendez_hnd.adapters.TipsAdapter;
 import com.example.alumno1.task2_adrian_menendez_hnd.beans.TipsBean;
-import com.example.alumno1.task2_adrian_menendez_hnd.tests.TipsModelo;
+import com.example.alumno1.task2_adrian_menendez_hnd.tests.Modelo;
 
 import java.util.ArrayList;
 
@@ -39,7 +39,7 @@ public class TipsFragment extends Fragment implements AdapterView.OnItemClickLis
                              Bundle savedInstanceState) {
        View rootview =  inflater.inflate(R.layout.fragment_tips, container, false);
         listTips = (ListView) rootview.findViewById(R.id.listTips);
-        tips = TipsModelo.getTips();
+        tips = Modelo.getTips();
         TipsAdapter tipsAdapter = new TipsAdapter(getActivity(), R.layout.item_tips, tips);
         listTips.setAdapter(tipsAdapter);
         listTips.setOnItemClickListener(this);

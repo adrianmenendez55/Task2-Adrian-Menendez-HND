@@ -34,6 +34,7 @@ public class ObjetosActivity extends AppCompatActivity implements View.OnClickLi
 
         btnCompartir.setOnClickListener(this);
 
+        // Mostramos por pantalla en el detalle de los objetos el nombre, texto y foto alamcenados en el ObjetosBean
         nombreObjeto.setText(String.valueOf(objetosBean.getNombreObjeto()));
         detalleObjeto.setText(String.valueOf(objetosBean.getDetalleObjeto()));
         imagen.setImageDrawable(ContextCompat.getDrawable(this, objetosBean.getImagen()));
@@ -41,6 +42,7 @@ public class ObjetosActivity extends AppCompatActivity implements View.OnClickLi
 
     @Override
     public void onClick(View view) {
+        // Función para compartir el detalle por redes sociales
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setType("text/plain");
         intent.putExtra(Intent.EXTRA_TEXT, String.valueOf(detalleObjeto));

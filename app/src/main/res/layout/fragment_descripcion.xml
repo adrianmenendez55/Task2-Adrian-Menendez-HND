@@ -8,7 +8,9 @@
     <!-- TODO: Update blank fragment layout -->
     <TextView android:id="@+id/txtDescrip"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textStyle="italic"
         android:text="@string/descrip"/>
 
     <Button android:id="@+id/btnCompartir"
