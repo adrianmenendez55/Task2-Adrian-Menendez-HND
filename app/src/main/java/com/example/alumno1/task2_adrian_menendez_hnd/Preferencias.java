@@ -15,6 +15,7 @@ public class Preferencias {
         this.context = context;
     }
 
+    // Escribir preferencias
     public void setUsuario (UsuarioBean usuario) {
         String usuarioJson = usuario.toJson();
         SharedPreferences sharedPreferences = context.getSharedPreferences(PREFERENCIAS,
@@ -26,6 +27,7 @@ public class Preferencias {
         editor.commit();
     }
 
+    // Leer preferencias
     public UsuarioBean getUsuario () {
         SharedPreferences sharedPreferences = context.getSharedPreferences(PREFERENCIAS,
                 Context.MODE_PRIVATE);
@@ -34,6 +36,7 @@ public class Preferencias {
         return UsuarioBean.fromJson (usuarioJson);
     }
 
+    // Le damos valor al Login
     public void setLogin (boolean login) {
         SharedPreferences sharedPreferences = context.getSharedPreferences(PREFERENCIAS,
                 Context.MODE_PRIVATE);
@@ -44,6 +47,7 @@ public class Preferencias {
         editor.commit();
     }
 
+    // Ver en qué estado se encuentra el booleano Login
     public boolean isLogin() {
         SharedPreferences sharedPreferences = context.getSharedPreferences(PREFERENCIAS,
                 Context.MODE_PRIVATE);
