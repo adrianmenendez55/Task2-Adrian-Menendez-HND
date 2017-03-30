@@ -2,7 +2,7 @@ package com.example.alumno1.task2_adrian_menendez_hnd.beans;
 
 import java.io.Serializable;
 
-// Clase Bean que guarda el detalle de los objetos
+// Clase Bean que guarda las características de los objetos
 
 public class ObjetosBean implements Serializable {
     private int imagen;

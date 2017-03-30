@@ -6,7 +6,7 @@ import java.io.Serializable;
  * Created by ALUMNOS on 10/03/2017.
  */
 
-// Clase Bean que guarda el detalle de los personajes
+// Clase Bean que guarda las características de los personajes
 
 public class PersonajesBean implements Serializable {
     private int foto;

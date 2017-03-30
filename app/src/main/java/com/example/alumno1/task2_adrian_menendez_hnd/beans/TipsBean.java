@@ -6,7 +6,7 @@ import java.io.Serializable;
  * Created by ALUMNOS on 14/03/2017.
  */
 
-// Clase Bean que guarda el detalle de los tips
+// Clase Bean que guarda las características de los tips
 
 public class TipsBean implements Serializable{
     private String nombreTips;
