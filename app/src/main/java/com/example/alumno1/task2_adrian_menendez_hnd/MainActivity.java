@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         navView.setNavigationItemSelectedListener(this);
 
         fm = getSupportFragmentManager();
-        // al quitar el fragment se vacía la pila
+        // Al quitar el fragment se vacía la pila
         fm.popBackStack(null,FragmentManager.POP_BACK_STACK_INCLUSIVE);
 
     }
