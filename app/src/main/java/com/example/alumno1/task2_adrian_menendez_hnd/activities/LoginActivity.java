@@ -45,7 +45,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btnNuevo:
-                // Al pulsar el botón nuevo se abrirá la actividad de registro
+                // Al pulsar el botón nuevo se abrirá la actividad de registro/nuevo usuario
                 Intent intent = new Intent(LoginActivity.this, NuevoUsuarioActivity.class);
                 startActivity(intent);
                 finish();
