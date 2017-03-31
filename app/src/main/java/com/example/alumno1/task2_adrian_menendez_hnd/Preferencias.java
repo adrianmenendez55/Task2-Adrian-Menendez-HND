@@ -15,7 +15,7 @@ public class Preferencias {
         this.context = context;
     }
 
-    // Escribir preferencias
+    // Guardamos el usuario
     public void setUsuario (UsuarioBean usuario) {
         String usuarioJson = usuario.toJson();
         SharedPreferences sharedPreferences = context.getSharedPreferences(PREFERENCIAS,
@@ -27,7 +27,7 @@ public class Preferencias {
         editor.commit();
     }
 
-    // Leer preferencias
+    // Leemos el usuario
     public UsuarioBean getUsuario () {
         SharedPreferences sharedPreferences = context.getSharedPreferences(PREFERENCIAS,
                 Context.MODE_PRIVATE);

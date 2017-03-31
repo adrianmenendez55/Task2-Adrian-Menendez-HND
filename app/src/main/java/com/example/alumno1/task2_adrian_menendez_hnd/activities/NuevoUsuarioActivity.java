@@ -51,7 +51,7 @@ public class NuevoUsuarioActivity extends AppCompatActivity implements View.OnCl
             preferencias.setUsuario(usuarioBean);
 
             Toast.makeText(NuevoUsuarioActivity.this,
-                    "Usuario guardado",
+                    getString(R.string.guardado),
                     Toast.LENGTH_SHORT).show();
 
             Intent intent = new Intent(NuevoUsuarioActivity.this, LoginActivity.class);
@@ -59,7 +59,7 @@ public class NuevoUsuarioActivity extends AppCompatActivity implements View.OnCl
             finish();
         } else {
             Toast.makeText(NuevoUsuarioActivity.this,
-                    "Datos obligatorios",
+                    getString(R.string.oblig),
                     Toast.LENGTH_SHORT).show();
         }
 

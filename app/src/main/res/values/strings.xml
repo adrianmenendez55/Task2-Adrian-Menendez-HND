@@ -30,4 +30,8 @@
     <string name="AjustesVersion">Versión: 2.0</string>
     <string name="compartir">Compartir el detalle</string>
     <string name="editarPerfil">Editar Perfil</string>
+    <string name="datosinc">Rellene bien los datos</string>
+    <string name="usu">No existe el usuario</string>
+    <string name="oblig">Datos obligatorios</string>
+    <string name="guardado">Usuario Guardado</string>
 </resources>
