@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.example.alumno1.task2_adrian_menendez_hnd.R;
 import com.example.alumno1.task2_adrian_menendez_hnd.beans.ObjetosBean;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -30,6 +31,7 @@ public class ObjetosAdapter extends ArrayAdapter<ObjetosBean>{
     // Clase viewholder creada para no estar creando elementos de la lista
     class ViewHolder {
         private TextView nombreObjeto;
+        private ImageView imagenObjeto;
     }
 
     @NonNull
@@ -41,6 +43,7 @@ public class ObjetosAdapter extends ArrayAdapter<ObjetosBean>{
             viewHolder = new ViewHolder();
             view = LayoutInflater.from(context).inflate(resource, null);
             viewHolder.nombreObjeto = (TextView) view.findViewById(R.id.nombreObjeto);
+            viewHolder.imagenObjeto = (ImageView) view.findViewById(R.id.imagenObjeto);
             view.setTag(viewHolder);
 
         } else {
@@ -48,6 +51,12 @@ public class ObjetosAdapter extends ArrayAdapter<ObjetosBean>{
         }
         ObjetosBean objetosBean = objects.get(position);
         viewHolder.nombreObjeto.setText(objetosBean.getNombreObjeto());
+        //viewHolder.imagenObjeto.setImageDrawable(ContextCompat.getDrawable(context, objetosBean.getImagen()));
+        Picasso.with(context)
+                .load(objetosBean.getImagen())
+                .resize(50, 50)
+                .centerCrop()
+                .into(viewHolder.imagenObjeto);
 
         return view;
     }

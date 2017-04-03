@@ -20,7 +20,7 @@ import com.example.alumno1.task2_adrian_menendez_hnd.fragments.PerfilFragment;
 import com.example.alumno1.task2_adrian_menendez_hnd.fragments.PersonajesFragment;
 import com.example.alumno1.task2_adrian_menendez_hnd.fragments.TipsFragment;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener, NavigationView.OnNavigationItemSelectedListener{
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
     private Toolbar toolbar;
     private DrawerLayout drawer;
@@ -55,15 +55,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
         }
         return true;
-    }
-
-    @Override
-    public void onClick(View view) {
-        Preferencias preferencias = new Preferencias(MainActivity.this);
-        preferencias.setLogin(false);
-        Intent intent = new Intent(MainActivity.this, LoginActivity.class);
-        startActivity(intent);
-        finish();
     }
 
     @Override

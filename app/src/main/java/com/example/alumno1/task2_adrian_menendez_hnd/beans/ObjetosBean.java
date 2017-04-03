@@ -5,21 +5,21 @@ import java.io.Serializable;
 // Clase Bean que guarda las características de los objetos
 
 public class ObjetosBean implements Serializable {
-    private int imagen;
+    private String imagen;
     private String nombreObjeto;
     private String detalleObjeto;
 
-    public ObjetosBean(int imagen, String nombreObjeto, String detalleObjeto) {
+    public ObjetosBean(String imagen, String nombreObjeto, String detalleObjeto) {
         this.imagen = imagen;
         this.nombreObjeto = nombreObjeto;
         this.detalleObjeto = detalleObjeto;
     }
 
-    public int getImagen() {
+    public String getImagen() {
         return imagen;
     }
 
-    public void setImagen(int imagen) {
+    public void setImagen(String imagen) {
         this.imagen = imagen;
     }
 

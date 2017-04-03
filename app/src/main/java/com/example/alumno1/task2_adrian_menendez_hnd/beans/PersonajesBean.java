@@ -9,21 +9,21 @@ import java.io.Serializable;
 // Clase Bean que guarda las características de los personajes
 
 public class PersonajesBean implements Serializable {
-    private int foto;
+    private String foto;
     private String descripcion;
     private String detalle;
 
-    public PersonajesBean(int foto, String descripcion, String detalle) {
+    public PersonajesBean(String foto, String descripcion, String detalle) {
         this.foto = foto;
         this.descripcion = descripcion;
         this.detalle = detalle;
     }
 
-    public int getFoto() {
+    public String getFoto() {
         return foto;
     }
 
-    public void setFoto(int foto) {
+    public void setFoto(String foto) {
         this.foto = foto;
     }
 

@@ -12,6 +12,7 @@ import android.widget.TextView;
 import com.example.alumno1.task2_adrian_menendez_hnd.R;
 import com.example.alumno1.task2_adrian_menendez_hnd.beans.PersonajesBean;
 import com.example.alumno1.task2_adrian_menendez_hnd.fragments.PersonajesFragment;
+import com.squareup.picasso.Picasso;
 
 public class PersonajeActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -34,9 +35,13 @@ public class PersonajeActivity extends AppCompatActivity implements View.OnClick
 
         btnCompartir.setOnClickListener(this);
 
-        // Mostramos por pantalla en el detalle del persoanje el nombre, texto y foto alamcenados en PersonajesBean
+        // Mostramos por pantalla en el detalle del personaje el nombre, texto y foto alamcenados en PersonajesBean
         nombrePersonaje.setText(String.valueOf(personajesBean.getDescripcion()));
-        imgPersonaje.setImageDrawable(ContextCompat.getDrawable(this, personajesBean.getFoto()));
+
+        Picasso.with(this)
+                .load(personajesBean.getFoto())
+                .into(imgPersonaje);
+        //imgPersonaje.setImageDrawable(ContextCompat.getDrawable(this, personajesBean.getFoto()));
         textoDetalle.setText(String.valueOf(personajesBean.getDetalle()));
     }
 

@@ -54,7 +54,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 // Al pulsar el botón entrar, si se realiza bien, se abrirá la actividad principal
                 String email = editEmail.getText().toString();
                 String pass = editPass.getText().toString();
-                if (email != null && pass != null && !email.isEmpty() && !pass.isEmpty()) {
+                if (email != null && pass != null && !email.isEmpty() && !pass.isEmpty() && Utils.isEmail(email)) {
                     Preferencias preferencias = new Preferencias(LoginActivity.this);
                     UsuarioBean usuarioBean = preferencias.getUsuario();
                     if (usuarioBean.getEmail() != null) {

@@ -15,7 +15,7 @@ import com.example.alumno1.task2_adrian_menendez_hnd.Preferencias;
 import com.example.alumno1.task2_adrian_menendez_hnd.R;
 import com.example.alumno1.task2_adrian_menendez_hnd.beans.UsuarioBean;
 
-public class PerfilFragment extends Fragment implements View.OnClickListener{
+public class PerfilFragment extends Fragment {
 
     private TextView textoUsuario;
     private TextView textoApellido;
@@ -53,11 +53,5 @@ public class PerfilFragment extends Fragment implements View.OnClickListener{
     @Override
     public void onDetach() {
         super.onDetach();
-    }
-
-
-    @Override
-    public void onClick(View view) {
-        
     }
 }

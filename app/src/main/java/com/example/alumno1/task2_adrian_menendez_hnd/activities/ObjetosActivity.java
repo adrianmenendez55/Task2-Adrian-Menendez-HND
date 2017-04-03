@@ -12,6 +12,7 @@ import android.widget.TextView;
 import com.example.alumno1.task2_adrian_menendez_hnd.R;
 import com.example.alumno1.task2_adrian_menendez_hnd.beans.ObjetosBean;
 import com.example.alumno1.task2_adrian_menendez_hnd.fragments.ObjetosFragment;
+import com.squareup.picasso.Picasso;
 
 public class ObjetosActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -37,7 +38,10 @@ public class ObjetosActivity extends AppCompatActivity implements View.OnClickLi
         // Mostramos por pantalla en el detalle de los objetos el nombre, texto y foto alamcenados en el ObjetosBean
         nombreObjeto.setText(String.valueOf(objetosBean.getNombreObjeto()));
         detalleObjeto.setText(String.valueOf(objetosBean.getDetalleObjeto()));
-        imagen.setImageDrawable(ContextCompat.getDrawable(this, objetosBean.getImagen()));
+        Picasso.with(this)
+                .load(objetosBean.getImagen())
+                .into(imagen);
+        //imagen.setImageDrawable(ContextCompat.getDrawable(this, objetosBean.getImagen()));
     }
 
     @Override
